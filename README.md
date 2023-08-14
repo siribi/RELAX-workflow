@@ -4,7 +4,7 @@ This repository contains scripts for running RELAX in [HyPhy](https://hyphy.org/
 
 As written on the HyPhy pages: "RELAX is a hypothesis testing framework that asks whether the strength of natural selection has been relaxed or intensified along a specified set of test branches" <br />
 
-To be able to run RELAX, you need on or several gene alignments and either a species tree or a gene tree. <br />
+To be able to run RELAX, you need one or several gene alignments + either a species tree or a gene tree. <br />
 
 Before running HyPhy with these scripts, I first generated single-copy gene alignments following this code: https://github.com/siribi/CODEML_WORKFLOW and downloaded a species tree from timetree.org. (Note that the tree from timetree has branch lengths in the millions of years, so the branch-lenghts are not really useful here). <br />
 
@@ -37,3 +37,20 @@ mkdir ERRORS RELAX_FALSE RELAX_TRUE RESULTS
 sbatch --array=X-XXX worker_hyphy.sbatch 
 ```
 
+9. Check you results!
+If hyphy finds evidence for relaxed selection, the message should read something like this:
+```
+>Evidence for *relaxation of selection* among **test** branches _relative_ to the **reference** branches at P<=0.05
+```
+For intensified selection, you get another message: 
+```
+>Evidence for *intensification of selection* among **test** branches _relative_ to the **reference** branches at P<=0.05
+```
+Checking how many "relaxed" selection results I have for each alignment set: 
+```
+grep "relaxation of selection" *txt | wc -l
+```
+And the remaining positive results should be intensified:
+```
+grep "intensification of selection" *txt | wc -l
+```
