@@ -46,11 +46,11 @@ For intensified selection, you get another message:
 ```
 >Evidence for *intensification of selection* among **test** branches _relative_ to the **reference** branches at P<=0.05
 ```
-Checking how many "relaxed" selection results I have for each alignment set: 
+Checking how many "relaxed" selection results you have for each alignment set: 
 ```
 grep "relaxation of selection" *txt | wc -l
 ```
-And the remaining positive results should be intensified:
+And the remaining positive results should then be intensified:
 ```
 grep "intensification of selection" *txt | wc -l
 ```
