@@ -6,7 +6,7 @@ As written on the HyPhy pages: "RELAX is a hypothesis testing framework that ask
 
 To be able to run RELAX, you need one or several gene alignments + either a species tree or a gene tree. <br />
 
-Before running HyPhy with these scripts, I first generated single-copy gene alignments following this code: https://github.com/siribi/CODEML_WORKFLOW and downloaded a species tree from timetree.org. (Note that the tree from timetree has branch lengths in the millions of years, so the branch-lenghts are not really useful here). <br />
+Before running HyPhy with these scripts, I first generated single-copy gene alignments following this code: https://github.com/siribi/CODEML_WORKFLOW and downloaded a species tree from [timetree](timetree.org). (Note that the tree from timetree has branch lengths in the millions of years, so the branch-lenghts are not really useful here). <br />
 
 **How to run the RELAX worker script:**
 
